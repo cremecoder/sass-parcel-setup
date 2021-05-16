@@ -1,0 +1,36 @@
+@use 'index' as *;
+
+body {
+  background: $primary-color;
+  color: $text-color;
+}
+
+.main {
+  @include flex-center();
+  width: 80% - 40%;
+  margin: 0 auto;
+
+  #{&}__p1 {
+    font-weight: weight(bold);
+
+    &:hover {
+      color: pink;
+    }
+  }
+
+  #{&}__p2 {
+    @extend .main__p1;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.light {
+  @include theme($light-theme: false);
+}
