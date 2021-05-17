@@ -1,3 +1,5 @@
+@use 'variables' as var;
+
 @mixin flex-center($direction: row) {
   display: flex;
   justify-content: center;
@@ -7,13 +9,13 @@
 
 @mixin theme($light-theme: true) {
   @if $light-theme {
-    background: lighten($primary-color, 100%);
-    color: darken($text-color, 100%);
+    background: lighten(var.$primary-color, 100%);
+    color: darken(var.$text-color, 100%);
   }
 }
 
 @mixin mobile {
-  @media (max-width: $mobile) {
+  @media (max-width: var.$mobile) {
     @content;
   }
 }

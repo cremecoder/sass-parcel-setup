@@ -1,12 +1,12 @@
-@use 'index' as *;
+@use '../root';
 
 body {
-  background: $primary-color;
-  color: $text-color;
+  background: root.$primary-color;
+  color: root.$text-color;
 }
 
 .main {
-  @include flex-center();
+  @include root.flex-center();
   width: 80% - 40%;
   margin: 0 auto;
 
@@ -22,15 +22,15 @@ body {
     @extend .main__p1;
 
     &:hover {
-      color: $accent-color;
+      color: root.$accent-color;
     }
   }
 
-  @include mobile {
+  @include root.mobile {
     flex-direction: column;
   }
 }
 
 .light {
-  @include theme($light-theme: false);
+  @include root.theme($light-theme: true);
 }

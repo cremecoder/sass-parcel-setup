@@ -1,0 +1,10 @@
+@forward '../styles/resets';
+@forward '../styles/variables';
+@forward '../styles/mixins';
+@forward '../styles/functions';
+@forward '../styles/maps';
+
+// @use use only in this file
+// @forward allows export of use
+// * removes namespace
+// as allows renaming of namespace

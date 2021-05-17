@@ -30,7 +30,3 @@ $font-sizes: (
     font-size: $size;
   }
 }
-
-@function weight($weight-name: regular) {
-  @return map-get($font-weights, $weight-name);
-}
